@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+    .entry {
+        font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .add {
+        float: right;
+    }
+
+    .add_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Home Screen Page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-4">
+        <a class="navbar-brand" href="#">Brand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Add Items <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Query</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Reports
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">X</a>
+                        <a class="dropdown-item" href="#">Y</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <span><span class="navbar-text mr-2" style="font-size: small;">Name of the Student</span>
+                    <!-- <input class="form-control mr-sm-2" type="Your name" placeholder="Search" aria-label="Search"> -->
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <h1 class="entry"><b>ADD INVENTORY ITEMS</b></h1>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="inputItem">Add the items</label>
+            <select id="inputItem" class="form-control">
+                <option selected>Select the items</option>
+                <option>Computer</option>
+                <option>Chemicals</option>
+                <option>Books</option>
+                <option>Laptop</option>
+                <option>Furniture Items</option>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputBrand">Brand</label>
+            <input type="text" class="form-control" id="inputBrand">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputModel">Model</label>
+            <input type="text" class="form-control" id="inputModel">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputSno">S.No.</label>
+            <input type="text" class="form-control" id="inputSno">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="inputPONo">P.O. No.</label>
+            <input type="text" class="form-control" id="inputPONo">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputPODate">P.O. Date</label>
+            <input type="date" class="form-control" id="inputPODate">
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="inputIndentor">Indentor</label>
+            <input type="text" class="form-control" id="inputIndentor">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputRecievedOn">Recieved on</label>
+            <input type="date" class="form-control" id="inputRecievedOn">
+        </div>
+    </div>
+    <h1><span class=" mx-5 my-3 badge badge-dark">ALLOCATION DETAILS</span></h1>
+    <button type="button" id="addBtn" class="btn add row mx-1 btn-danger">Add Row</button>
+    
+    <table class="table table-bordered" id="childTable">
+        <thead class="table-info">
+            <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">Allottee</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+            </tr>
+        </thead>
+
+        <tbody id="pro">
+            <tr>
+                <th scope="row">1</th>
+                <td class="col-sm-3.5">
+                    <input type="text" name="name" class="form-control" />
+                </td>
+                <td class="col-sm-3.5">
+                    <input type="text" name="school" class="form-control" />
+                </td>
+                <td class="col-sm-3.5">
+                    <input type="text" name="year" class="form-control" />
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+        <button type="button" onclick="submit()"class="btn  row mx-1 btn-primary">Save</button>
+        <span><button type="button" class="btn  row mx-1 btn-secondary">Cancel</button></span>
+    </div>
+
+
+    <script>
+        const submit = ()=>{
+            const form = document.getElementById("childTable")
+            console.log(form);
+        }
+        var i = 1;
+        let template = `<th scope = "row" >$SN$</th>
+        <td class="col-sm-3.5"><input type="text" name="name" class="form-control"/></td>
+        <td class="col-sm-3.5"><input type="text" name="school" class="form-control" /></td>
+        <td class="col-sm-3.5"><input type="text" name="year" class="form-control" /></td>
+        `
+        let button=document.getElementById("addBtn")
+        button.addEventListener("click",childrenRow)
+        function childrenRow() {
+            i =i+1;
+            let table=document.getElementById("pro")
+            const node  = document.createElement("tr")
+            node.innerHTML = template.replace("$SN$",`${i}`)
+            
+            table.append(node)
+}
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
